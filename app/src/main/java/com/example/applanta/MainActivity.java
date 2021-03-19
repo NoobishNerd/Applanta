@@ -137,10 +137,10 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer {
     }
 
     public void synchronizeWithPlant(View v){
-        //if(!closestPlant.equals("none")){
+        if(!closestPlant.equals("none")){
             syncAnimation = 2;
             //replace hard-code for closestPlant
-            String url = getResources().getString(R.string.api_url) + "plants/" + "e2c56db5-dffb-48d2-b060-d0f5a71096e0";
+            String url = getResources().getString(R.string.api_url) + "plants/" + closestPlant;
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
                     (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
                         @Override
@@ -170,10 +170,10 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer {
                         }
                     });
             VolleySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
-        //}else{
-           //syncAnimation = 0;
-           //Toast.makeText(getBaseContext(), "Não há Plantas por perto! :(", Toast.LENGTH_SHORT).show();
-        //}
+        }else{
+            syncAnimation = 0;
+            Toast.makeText(getBaseContext(), "Não há Plantas por perto! :(", Toast.LENGTH_SHORT).show();
+        }
     }
 
 
