@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient_background">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/applanta_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:contentDescription="TODO"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:id="@+id/sync_flower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/sync_flower"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="TODO"
+        android:scaleType="fitXY"
+        android:onClick="synchronizeWithPlant"/>
+
+    <ImageView
+        android:id="@+id/view_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/view_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/logo"
+        android:scaleType="fitXY"
+        />
+
+    <ImageView
+        android:id="@+id/user_tier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        app:srcCompat="@drawable/user_tier"
+        android:onClick="changeToUserActivity"
+        android:layout_marginBottom="10dp"/>
+
+    <ImageView
+        android:id="@+id/diary_tier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        app:srcCompat="@drawable/diary_tier"
+        android:onClick="changeToDiaryActivity"
+        android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".RecordsActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:contentDescription="TODO"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/applanta_logo" />
+
+    <ImageView
+        android:id="@+id/view4_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="20dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/view4_bar" />
+
+    <TextView
+        android:id="@+id/records_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view4_bar"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/lora_bold"
+        android:text="@string/gravações"
+        android:textColor="@color/eggshell"
+        android:textSize="30sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/records_title"
+        android:layout_marginTop="15dp"
+        android:clipToPadding="false"
+        android:paddingBottom="500dp" />
+
+    <ImageView
+        android:id="@+id/diary2_tier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:onClick="changeToDiaryActivity"
+        app:srcCompat="@drawable/diary_tier_2" />
+
+    <RelativeLayout
+        android:id="@+id/delete_popup"
+        android:layout_width="320dp"
+        android:layout_height="125dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:id="@+id/delete_popup_box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_background_popup_box"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/delete_popup_title"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:fontFamily="@font/lora_bold"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/delete_popup_title"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/delete_popup_recording"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/lora_bold"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/delete_popup_recording"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+        <View
+            android:id="@+id/delete_popup_remove"
+            android:layout_width="125dp"
+            android:layout_height="35dp"
+            android:background="@color/white"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="hideDeletePopup"
+            />
+
+        <TextView
+            android:id="@+id/delete_popup_remove_text"
+            android:layout_width="125dp"
+            android:layout_height="35dp"
+            android:fontFamily="@font/lora_bold"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="@string/delete_popup_button_text"
+            android:textAlignment="center"
+            android:textColor="@color/dark_green"
+            android:textSize="18sp"
+            android:visibility="visible"
+            android:layout_alignParentEnd="true" />
+
+        <View
+            android:id="@+id/delete_popup_cancel"
+            android:layout_width="125dp"
+            android:layout_height="35dp"
+            android:background="@color/dark_green"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:onClick="hideDeletePopup"/>
+
+        <TextView
+            android:id="@+id/delete_popup_cancel_text"
+            android:layout_width="125dp"
+            android:layout_height="35dp"
+            android:fontFamily="@font/lora_bold"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="@string/cancel_text"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="visible"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

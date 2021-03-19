@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="25dp"
+    >
+
+    <View
+        android:id="@+id/record_box"
+        android:layout_width="338dp"
+        android:layout_height="172dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/record_box" />
+
+    <View
+        android:id="@+id/play_pause_box"
+        android:layout_width="318dp"
+        android:layout_height="36dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="125dp"
+        android:background="@drawable/play_pause_box" />
+
+    <View
+        android:id="@+id/record_user_box"
+        android:layout_width="221dp"
+        android:layout_height="54dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/record_user_box" />
+
+    <ProgressBar
+        android:id="@+id/record_bar_complement"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="82dp"
+        android:layout_height="26dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:progress="0"
+        android:progressDrawable="@drawable/progress_bar_record"
+        android:progressTint="@color/dark_green" />
+
+    <ImageView
+        android:id="@+id/play_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@id/record_bar_complement"
+        android:layout_marginLeft="-57dp"
+        android:src="@drawable/play_button" />
+
+    <ImageView
+        android:id="@+id/pause_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@id/record_bar_complement"
+        android:layout_marginRight="-57dp"
+        android:src="@drawable/circle_record" />
+
+    <ImageView
+        android:id="@+id/rectangle_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_alignEnd="@id/record_bar_complement"
+        android:src="@drawable/rectangle_record" />
+
+    <EditText
+        android:id="@+id/record_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="15dp"
+        android:layout_alignStart="@id/record_box"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/dark_green"
+        android:textSize="27sp"
+        android:focusedByDefault="false"
+        android:background="@null"
+        />
+
+    <ImageView
+        android:id="@+id/record_pencil"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/record_title"
+        android:src="@drawable/record_pencil" />
+
+    <ImageView
+        android:id="@+id/record_bin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignEnd="@id/record_box"
+        android:layout_marginRight="11dp"
+        android:src="@drawable/record_bin" />
+
+    <TextView
+        android:id="@+id/plant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:fontFamily="@font/lato"
+        android:text="Plant Name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="23sp" />
+
+</RelativeLayout>

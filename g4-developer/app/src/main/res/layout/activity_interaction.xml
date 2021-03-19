@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background_interaction"
+    tools:context=".InteractionActivity">
+    
+    <ImageView
+        android:id="@+id/interactive_zone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/interactive_zone"
+        android:layout_below="@+id/plant_name"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ImageView
+        android:id="@+id/button_go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/button_go_back"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="30dp"
+        android:onClick="changeToMainActivity"
+        />
+
+    <ImageView
+        android:id="@+id/music_sheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/music_sheet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="109dp"/>
+
+    <TextView
+        android:id="@+id/plant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="115dp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/dark_green"/>
+
+    <ImageView
+        android:id="@+id/record_interaction_tier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/record_interaction_tier"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/interactive_zone"
+        android:layout_marginTop="5dp"
+        android:onClick="recordInteractions"
+        />
+
+    <ImageView
+        android:id="@+id/record_interaction_tier_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/record_interaction_tier_red"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/interactive_zone"
+        android:layout_marginTop="5dp"
+        android:onClick="recordInteractions"
+        android:alpha="0"
+        />
+    <ProgressBar
+        android:id="@+id/record_progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="150dp"
+        android:layout_height="18dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:progress="0"
+        android:progressDrawable="@drawable/progress_bar"
+        android:progressTint="@color/white"
+        android:alpha="0"/>
+
+    <ImageView
+        android:id="@+id/plant_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="25dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/flower_pot" />
+
+    <ImageView
+        android:id="@+id/note_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/note_1"
+        android:alpha="0" />
+
+    <ImageView
+        android:id="@+id/note_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/note_2"
+        android:alpha="0" />
+
+    <ImageView
+        android:id="@+id/note_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/note_3"
+        android:alpha="0" />
+
+    <ImageView
+        android:id="@+id/note_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/note_4"
+        android:alpha="0" />
+
+    <ImageView
+        android:id="@+id/note_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/note_5"
+        android:alpha="0" />
+</RelativeLayout>

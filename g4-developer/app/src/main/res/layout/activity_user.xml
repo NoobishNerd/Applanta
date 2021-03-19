@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".UserActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:onClick="hideAchievementDesc"
+        >
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:contentDescription="TODO"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/applanta_logo" />
+
+    <ImageView
+        android:id="@+id/view_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="10dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/view2_bar" />
+
+    <ImageView
+        android:id="@+id/user_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-9dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/circle_user" />
+
+    <TextView
+        android:id="@+id/user_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-10dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/user"
+        android:textColor="@color/eggshell"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/user_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_text"
+        android:layout_marginLeft="-335dp"
+        android:layout_marginBottom="1dp"
+        android:layout_toRightOf="@id/user_bar"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/n_vel"
+        android:textColor="@color/dark_green"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/user_exp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_text"
+        android:layout_marginRight="-335dp"
+        android:layout_marginBottom="1dp"
+        android:layout_toLeftOf="@id/user_bar"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/exp"
+        android:textColor="@color/dark_green"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/user_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="335dp"
+        android:layout_height="18dp"
+        android:layout_below="@id/user_level"
+        android:layout_centerHorizontal="true"
+        android:progress="0"
+        android:progressDrawable="@drawable/progress_bar"
+        android:progressTint="@color/dark_green" />
+
+    <ProgressBar
+        android:id="@+id/user_bar_complement"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="335dp"
+        android:layout_height="18dp"
+        android:layout_below="@id/user_level"
+        android:layout_centerHorizontal="true"
+        android:progress="0"
+        android:progressDrawable="@drawable/progress_bar"
+        android:progressTint="@color/dark_green" />
+
+    <ImageView
+        android:id="@+id/achievements_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/conquistas_user" />
+
+    <ImageView
+        android:id="@+id/window_blur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blur"
+        android:visibility="invisible" />
+
+    <ProgressBar
+        android:id="@+id/loading_spinner"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/achievement_slot_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/achievements_user"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_toLeftOf="@id/achievement_slot_2"
+        android:onClick="showAchievementDesc"
+        app:srcCompat="@drawable/achievement_shape"
+
+        />
+
+    <ImageView
+        android:id="@+id/achievement_slot_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/achievements_user"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:onClick="showAchievementDesc"
+        app:srcCompat="@drawable/achievement_shape" />
+
+    <ImageView
+        android:id="@+id/achievement_slot_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/achievements_user"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/achievement_slot_2"
+        android:onClick="showAchievementDesc"
+        app:srcCompat="@drawable/achievement_shape" />
+
+    <ImageView
+        android:id="@+id/achievement_slot_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/achievements_user"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="56dp"
+        android:layout_toLeftOf="@id/achievement_slot_3"
+        android:onClick="showAchievementDesc"
+        app:srcCompat="@drawable/achievement_shape" />
+
+    <ImageView
+        android:id="@+id/achievement_slot_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/achievements_user"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="100dp"
+        android:layout_toRightOf="@id/achievement_slot_1"
+        android:onClick="showAchievementDesc"
+        app:srcCompat="@drawable/achievement_shape" />
+
+    <ImageView
+        android:id="@+id/achievement_slot_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/achievement_slot_1"
+        android:layout_marginTop="85dp"
+        android:layout_marginRight="25dp"
+        android:layout_toLeftOf="@id/achievement_slot_2"
+        android:onClick="showAchievementDesc"
+        app:srcCompat="@drawable/achievement_shape" />
+
+    <ImageView
+        android:id="@+id/achievement_slot_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/achievement_slot_2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp"
+        android:onClick="showAchievementDesc"
+        app:srcCompat="@drawable/achievement_shape" />
+
+    <ImageView
+        android:id="@+id/achievement_slot_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/achievement_slot_3"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="85dp"
+        android:layout_toRightOf="@id/achievement_slot_2"
+        android:onClick="showAchievementDesc"
+        app:srcCompat="@drawable/achievement_shape"
+        android:paddingBottom="120dp"/>
+
+
+    <ImageView
+        android:id="@+id/logout_btn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/logout_button"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="12dp"/>
+
+    </RelativeLayout>
+</ScrollView>
+
+    <ImageView
+        android:id="@+id/flower_tier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:onClick="changeToMainActivity"
+        app:srcCompat="@drawable/flower_tier" />
+
+    <View
+        android:id="@+id/achievement_popup"
+        android:layout_width="330dp"
+        android:layout_height="125dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/gradient_background_popup_box"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/achievement_slot_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/achievement_popup"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="31dp"
+        android:layout_marginBottom="9dp"
+        android:onClick="showAchievementDesc"
+        android:visibility="visible"
+        app:srcCompat="@drawable/achievement_shape" />
+
+    <TextView
+        android:id="@+id/achievement_popup_title"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="70dp"
+        android:layout_toRightOf="@id/achievement_slot_popup"
+        android:fontFamily="@font/lora_bold"
+        android:gravity="center"
+        android:text="@string/title"
+        android:textAlignment="center"
+        android:textColor="@color/dark_green"
+        android:textSize="25sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/achievement_popup_desc"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toRightOf="@id/achievement_slot_popup"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="@string/description"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:visibility="visible" />
+
+</RelativeLayout>

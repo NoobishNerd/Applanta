@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Applanta</string>
+    <string name="description">Description</string>
+    <string name="title">Title</string>
+    <string name="exp">Exp</string>
+    <string name="n_vel">Nível</string>
+    <string name="user">User</string>
+    <string name="api_url">https://applanta-api.herokuapp.com/</string>
+    <string name="amigos_canteiros">Amigos Canteiros</string>
+    <string name="achievement_1_title">Pequenote</string>
+    <string name="achievement_1_desc">Conquista atribuida a colecionadores que chegam a nivel 5</string>
+    <string name="achievement_2_title">Viajante</string>
+    <string name="achievement_3_title">Veterano</string>
+    <string name="achievement_4_title">Quebra-Gelo</string>
+    <string name="achievement_5_title">Pentamigos!</string>
+    <string name="achievement_6_title">Meio Pelotão</string>
+    <string name="achievement_7_title">Festa</string>
+    <string name="achievement_8_title">Botânico</string>
+    <string name="achievement_2_desc">Conquista atribuida a colecionadores que chegam a nivel 10</string>
+    <string name="achievement_3_desc">Conquista atribuida a colecionadores que chegam a nivel 20</string>
+    <string name="achievement_4_desc">Conquista atribuida a colecionadores que fazem a sua primeira amizade</string>
+    <string name="achievement_5_desc">Conquista atribuida a colecionadores após 5 amizades</string>
+    <string name="achievement_6_desc">Conquista atribuida a colecionadores após 10 amizades</string>
+    <string name="achievement_7_desc">Conquista atribuida a colecionadores após 25 amizades</string>
+    <string name="achievement_8_desc">Conquista atribuida a colecionadores após 50 amizades</string>
+    <string name="gravações">Lista de Gravações</string>
+    <string name="delete_popup_title">Pretende remover a gravação</string>
+    <string name="delete_popup_recording">recording?</string>
+    <string name="delete_popup_button_text">Remover</string>
+    <string name="cancel_text">Cancelar</string>
+</resources>

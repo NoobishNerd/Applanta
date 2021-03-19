@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/plant_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="25dp">
+
+    <View
+        android:id="@+id/plant_box"
+        android:layout_width="338dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/plant_box" />
+
+    <ImageView
+        android:id="@+id/plant_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/plant_box"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/flower_pot" />
+
+    <TextView
+        android:id="@+id/plant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="29dp"
+        android:layout_toRightOf="@id/plant_photo"
+        android:fontFamily="@font/lato_bold"
+        android:text="Name"
+        android:textColor="@color/dark_green"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/plant_nature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/plant_name"
+        android:layout_marginLeft="11dp"
+        android:layout_toRightOf="@id/plant_photo"
+        android:fontFamily="@font/lato"
+        android:text="Species + Nature"
+        android:textColor="@color/dark_green"
+        android:textSize="13sp" />
+
+    <View
+        android:id="@+id/plant_desc_box"
+        android:layout_width="338dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:background="@drawable/plant_desc_box" />
+
+    <TextView
+        android:id="@+id/plant_desc"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:alpha="0"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:text="Description"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+</RelativeLayout>
